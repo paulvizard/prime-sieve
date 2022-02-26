@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 // Sieve of Eratosthenes
 
@@ -52,6 +53,10 @@ class PrimeSieve
         for (int i = 2; i <= max / number; i++)
         {
             auto multiple = number * i;
+            if (CheckNumber(multiple))
+            {
+                std::cout << "Already performed this " << number << " * " << i << " with result " << multiple << "\n";
+            }
             RemoveNumber(multiple);
         }
     }
@@ -111,7 +116,7 @@ int main()
     PrimeSieve sieve;
 
     auto start = std::chrono::high_resolution_clock::now();
-    sieve.RunSieve(1000000000);
+    sieve.RunSieve(100);
     auto end = std::chrono::high_resolution_clock::now();
 
     auto dur = end - start;
