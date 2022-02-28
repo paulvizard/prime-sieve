@@ -116,7 +116,7 @@ int main()
     PrimeSieve sieve;
 
     auto start = std::chrono::high_resolution_clock::now();
-    sieve.RunSieve(100);
+    sieve.RunSieve(1000000000);
     auto end = std::chrono::high_resolution_clock::now();
 
     auto dur = end - start;
