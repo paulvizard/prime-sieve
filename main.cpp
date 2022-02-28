@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <cstring>
+#include <chrono>
 
 // Sieve of Eratosthenes
 
@@ -53,10 +55,10 @@ class PrimeSieve
         for (int i = 2; i <= max / number; i++)
         {
             auto multiple = number * i;
-            if (CheckNumber(multiple))
-            {
-                std::cout << "Already performed this " << number << " * " << i << " with result " << multiple << "\n";
-            }
+//            if (CheckNumber(multiple))
+//            {
+//                std::cout << "Already performed this " << number << " * " << i << " with result " << multiple << "\n";
+//            }
             RemoveNumber(multiple);
         }
     }
