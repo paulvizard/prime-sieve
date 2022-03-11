@@ -3,6 +3,7 @@
 #include <cmath>
 #include <cstring>
 #include <chrono>
+#include <conio.h>
 
 // Sieve of Eratosthenes
 
@@ -127,5 +128,9 @@ int main()
     std::cout << "Processing took " << i_millis.count() << "ms" << std::endl;
 
     sieve.PrintPrimes();
+
+    std::cout << "Press enter to exit\n\n";
+    getch();
+
     return 0;
 }
